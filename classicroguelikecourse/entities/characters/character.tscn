@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjqtdt03e26h3"]
+
+[ext_resource type="Texture2D" uid="uid://bxk8pwk2doap5" path="res://assets/textures/tile_sheet.png" id="1_sau54"]
+[ext_resource type="Script" path="res://entities/characters/Character.cs" id="1_txjxc"]
+
+[node name="Character" type="Node2D"]
+script = ExtResource("1_txjxc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_sau54")
+region_enabled = true
+region_rect = Rect2(32, 80, 16, 16)

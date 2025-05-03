@@ -8,10 +8,16 @@ using ClassicRoguelikeCourse.managers.fsm.game_states;
 public partial class StartState : Node, IGameState
 {
     public event Action Finished;
+    private Player _player;
+    private InputHandler _inputHandler;
 
     public void Initialize()
     {
         GD.Print("初始化Entity和Manager");
+        _inputHandler = GetTree().CurrentScene.GetNode<InputHandler>("%InputHandler");
+        _inputHandler.Initialize();
+        _player = GetTree().CurrentScene.GetNode<Player>("%Player");
+        _player.Initialize();
     }
 
     public void Run()

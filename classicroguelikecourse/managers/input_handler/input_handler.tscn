@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bqvonni8tl35t"]
+
+[ext_resource type="Script" path="res://managers/input_handler/InputHandler.cs" id="1_ff2mk"]
+
+[node name="InputHandler" type="Node"]
+script = ExtResource("1_ff2mk")
+
+[node name="MovementTimer" type="Timer" parent="."]
+one_shot = true

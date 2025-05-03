@@ -5,17 +5,21 @@ using ClassicRoguelikeCourse.managers.fsm.game_states;
 public partial class WaitForInputState : Node, IGameState
 {
     public event Action Finished;
+    private InputHandler _inputHandler;
 
     public void Initialize()
     {
+        _inputHandler = GetTree().CurrentScene.GetNode<InputHandler>("%InputHandler");
+        _inputHandler.MovementInputHandled += InputHandlerOnMovementInputHandled;
+    }
+
+    private void InputHandlerOnMovementInputHandled(Vector2I _)
+    {
+        Finished?.Invoke();
     }
 
     public void Run()
     {
-        if (Input.IsAnythingPressed())
-        {
-            GD.Print("检测到按键输入");
-            Finished?.Invoke();
-        }
+        _inputHandler.Run();
     }
 }

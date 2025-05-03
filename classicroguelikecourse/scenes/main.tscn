@@ -1,10 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://ckds0cendk2fd"]
+[gd_scene load_steps=5 format=3 uid="uid://ckds0cendk2fd"]
 
 [ext_resource type="Script" path="res://scenes/Main.cs" id="1_vvwj8"]
 [ext_resource type="PackedScene" uid="uid://c1n6cpe4k75sx" path="res://managers/fsm/fsm.tscn" id="2_pwqvg"]
+[ext_resource type="PackedScene" uid="uid://bqvonni8tl35t" path="res://managers/input_handler/input_handler.tscn" id="3_ckrix"]
+[ext_resource type="PackedScene" uid="uid://bea0fu6a4kkql" path="res://entities/characters/player/player.tscn" id="4_thq6w"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_vvwj8")
 
 [node name="Fsm" parent="." instance=ExtResource("2_pwqvg")]
+unique_name_in_owner = true
+
+[node name="InputHandler" parent="." instance=ExtResource("3_ckrix")]
+unique_name_in_owner = true
+
+[node name="Player" parent="." instance=ExtResource("4_thq6w")]
 unique_name_in_owner = true

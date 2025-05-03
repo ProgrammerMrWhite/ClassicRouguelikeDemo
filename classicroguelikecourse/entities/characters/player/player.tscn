@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://bea0fu6a4kkql"]
+
+[ext_resource type="PackedScene" uid="uid://cjqtdt03e26h3" path="res://entities/characters/character.tscn" id="1_be802"]
+[ext_resource type="Script" path="res://entities/characters/player/Player.cs" id="2_rgvyv"]
+[ext_resource type="PackedScene" uid="uid://ck4bb6lf08827" path="res://components/movement_components/movement_components.tscn" id="3_5nvio"]
+
+[node name="Player" instance=ExtResource("1_be802")]
+script = ExtResource("2_rgvyv")
+
+[node name="Sprite2D" parent="." index="0"]
+region_rect = Rect2(0, 80, 16, 16)
+
+[node name="MovementComponents" parent="." index="1" instance=ExtResource("3_5nvio")]

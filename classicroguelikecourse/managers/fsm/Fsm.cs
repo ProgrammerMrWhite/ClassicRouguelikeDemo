@@ -1,7 +1,8 @@
+using ClassicRoguelikeCourse.managers;
 using ClassicRoguelikeCourse.managers.fsm.game_states;
 using Godot;
 
-public partial class Fsm : Node
+public partial class Fsm : Node, IManager
 {
     private IGameState _currentState;
 
