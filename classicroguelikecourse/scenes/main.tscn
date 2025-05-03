@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckds0cendk2fd"]
+
+[ext_resource type="Script" path="res://scenes/Main.cs" id="1_vvwj8"]
+[ext_resource type="PackedScene" uid="uid://c1n6cpe4k75sx" path="res://managers/fsm/fsm.tscn" id="2_pwqvg"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_vvwj8")
+
+[node name="Fsm" parent="." instance=ExtResource("2_pwqvg")]
+unique_name_in_owner = true

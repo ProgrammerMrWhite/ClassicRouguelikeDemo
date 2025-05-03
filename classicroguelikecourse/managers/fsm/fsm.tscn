@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://c1n6cpe4k75sx"]
+
+[ext_resource type="Script" path="res://managers/fsm/Fsm.cs" id="1_6qdjo"]
+[ext_resource type="PackedScene" uid="uid://wkj4euqd0jre" path="res://managers/fsm/game_states/start_state/start_state.tscn" id="2_dpp5w"]
+[ext_resource type="PackedScene" uid="uid://cj4r4kjge1s4x" path="res://managers/fsm/game_states/wait_for_input_state/wait_for_input_state.tscn" id="3_qwoxe"]
+[ext_resource type="PackedScene" uid="uid://dtjg3yxxy27q7" path="res://managers/fsm/game_states/action_state/action_state.tscn" id="4_6pr0p"]
+[ext_resource type="PackedScene" uid="uid://dd7d2mycrqdfd" path="res://managers/fsm/game_states/combat_state/combat_state.tscn" id="5_uw856"]
+
+[node name="Fsm" type="Node"]
+script = ExtResource("1_6qdjo")
+
+[node name="StartState" parent="." instance=ExtResource("2_dpp5w")]
+unique_name_in_owner = true
+
+[node name="WaitForInputState" parent="." instance=ExtResource("3_qwoxe")]
+unique_name_in_owner = true
+
+[node name="ActionState" parent="." instance=ExtResource("4_6pr0p")]
+unique_name_in_owner = true
+
+[node name="CombatState" parent="." instance=ExtResource("5_uw856")]
+unique_name_in_owner = true

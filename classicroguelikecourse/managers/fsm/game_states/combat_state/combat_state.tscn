@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dd7d2mycrqdfd"]
+
+[ext_resource type="Script" path="res://managers/fsm/game_states/combat_state/CombatState.cs" id="1_xkl5k"]
+
+[node name="CombatState" type="Node"]
+script = ExtResource("1_xkl5k")
